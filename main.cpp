@@ -15,26 +15,38 @@ double longitude;
 Compass longitudeDirection;
 
 public:
-GPS (double x, Compass y, double a, Compass b){
+GPS(double x, Compass y, double a, Compass b) {
   latitude = x;
   latitudeDirection = y;
   longitude = a;
-  longituteDirection = b;
+  longitudeDirection = b;
 
-{
+  if ((x == 0) && (a == 0)){
   y = Compass::N;
   b = Compass::W;
-}
-else if [(0.0 <= x >= 90.0) && (0.0 <= a >= 100.0){
+  }
+  if ((0.0 <= x >= 90.0) && (0.0 <= a >= 180.0)){
   y = Compass::N;
   b = Compass::W;
-  else if {(0.0 = x)}
-  x = 0;
-  y = Compass::N;
+  }
+  if ((0.0 > x)  (x > 90.0)){
+    x = 0;
+    y = Compass::N;
+  }
+  if ((0.0 > a)  (a > 180.0)){
+    a = 0;
+    b = Compass::W;
+  }
+
 }
-else if [(0.0 = a)]
 
+double getLatitude(){return latitude;}
 
+Compass getLatitudeDirection() {return latitudeDirection;}
+
+double getLongitude() {return longitude;}
+
+Compass getLongitudeDirection() {return longitudeDirection;}
 
 };
 
