@@ -9,6 +9,32 @@ enum class Compass {N, S, W, E};
 
 // Write your code here
 class GPS {
+double latitude;
+Compass latitudeDirection;
+double longitude;
+Compass longitudeDirection;
+
+public:
+GPS (double x, Compass y, double a, Compass b){
+  latitude = x;
+  latitudeDirection = y;
+  longitude = a;
+  longituteDirection = b;
+
+{
+  y = Compass::N;
+  b = Compass::W;
+}
+else if [(0.0 <= x >= 90.0) && (0.0 <= a >= 100.0){
+  y = Compass::N;
+  b = Compass::W;
+  else if {(0.0 = x)}
+  x = 0;
+  y = Compass::N;
+}
+else if [(0.0 = a)]
+
+
 
 };
 
